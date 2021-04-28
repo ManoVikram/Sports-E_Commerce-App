@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:sports_ecommerce_app/screens/detailsScreen.dart';
 
 import '../widgets/bottomNav.dart';
 import '../widgets/categoryChip.dart';
@@ -138,12 +139,21 @@ class HomeScreen extends StatelessWidget {
                         image: "assets/images/bag1.png",
                         cardColor: Color(0xFFFF243C),
                       ),
-                      ProductCard(
-                        brandName: "Nike",
-                        productName: "Power 5",
-                        price: 30,
-                        image: "assets/images/bag2.png",
-                        cardColor: Colors.white,
+                      InkWell(
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => DetailsScreen(),
+                            ),
+                          );
+                        },
+                        child: ProductCard(
+                          brandName: "Nike",
+                          productName: "Power 5",
+                          price: 30,
+                          image: "assets/images/bag2.png",
+                          cardColor: Colors.white,
+                        ),
                       ),
                       ProductCard(
                         brandName: "Adidas",
@@ -163,11 +173,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-
-
-
