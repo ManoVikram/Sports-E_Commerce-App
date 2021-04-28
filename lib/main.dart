@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+import './screens/homeScreen.dart';
 
 class MyApp extends StatefulWidget {
   @override
@@ -11,7 +14,12 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       title: "Sports eCommerce",
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(),
+      theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white,
+        textTheme: Theme.of(context).textTheme.apply(
+              fontFamily: GoogleFonts.oxygen().fontFamily,
+            ),
+      ),
       home: Sports(),
     );
   }
@@ -20,7 +28,9 @@ class _MyAppState extends State<MyApp> {
 class Sports extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: HomeScreen(),
+    );
   }
 }
 
