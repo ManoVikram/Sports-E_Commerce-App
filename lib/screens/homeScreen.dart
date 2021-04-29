@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:sports_ecommerce_app/screens/detailsScreen.dart';
 
+import '../screens/cartScreen.dart';
+import '../screens/detailsScreen.dart';
 import '../widgets/bottomNav.dart';
 import '../widgets/categoryChip.dart';
 import '../widgets/dockedFAB.dart';
@@ -33,27 +34,36 @@ class HomeScreen extends StatelessWidget {
                         color: Colors.black,
                         width: 28.0,
                       ),
-                      Stack(
-                        children: [
-                          SvgPicture.asset(
-                            "assets/icons/Menu 4.svg",
-                            color: Colors.black,
-                            width: 28.0,
-                          ),
-                          Positioned(
-                            right: 0,
-                            top: 0,
-                            child: Container(
-                              height: 10.0,
-                              width: 10.0,
-                              margin: EdgeInsets.only(left: 10.0),
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Colors.red,
+                      InkWell(
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (_) => CartScreen(),
+                            ),
+                          );
+                        },
+                        child: Stack(
+                          children: [
+                            SvgPicture.asset(
+                              "assets/icons/Menu 4.svg",
+                              color: Colors.black,
+                              width: 28.0,
+                            ),
+                            Positioned(
+                              right: 0,
+                              top: 0,
+                              child: Container(
+                                height: 10.0,
+                                width: 10.0,
+                                margin: EdgeInsets.only(left: 10.0),
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Colors.red,
+                                ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ],
                   ),
