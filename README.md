@@ -1,16 +1,13 @@
-# sports_ecommerce_app
+# Sports ECommerce App
 
-A new Flutter project.
+An ECommerce app with a stunning UI.
 
-## Getting Started
+## UI Inspiration
 
-This project is a starting point for a Flutter application.
+UI credits to [Shakib 🏆](https://dribbble.com/iamshakibali).
 
-A few resources to get you started if this is your first Flutter project:
+## UI
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Home Screen](assets/images/HomeScreen.png)
+![Details Screen](assets/images/DetailsScreen.png)
+![Cart Screen](assets/images/CartScreen.png)
