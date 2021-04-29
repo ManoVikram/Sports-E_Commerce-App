@@ -29,7 +29,9 @@ class DetailsScreen extends StatelessWidget {
                 size: 28.0,
                 color: Colors.white,
               ),
-              SizedBox(width: 10.0,),
+              SizedBox(
+                width: 10.0,
+              ),
               Text(
                 "Add To My Cart",
                 style: TextStyle(
@@ -141,22 +143,52 @@ class DetailsScreen extends StatelessWidget {
               height: 30.0,
             ),
             Expanded(
-              child: Container(
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(42.0),
-                    topRight: Radius.circular(42.0),
+              child: Stack(
+                children: [
+                  Container(
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(42.0),
+                        topRight: Radius.circular(42.0),
+                      ),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 36.0,
+                        vertical: 20.0,
+                      ),
+                      child: ProductDetails(),
+                    ),
                   ),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 36.0,
-                    vertical: 20.0,
+                  Positioned(
+                    top: 0,
+                    right: 30,
+                    child: Container(
+                      height: 48.0,
+                      width: 48.0,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.white,
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            offset: Offset(0, 5),
+                            blurRadius: 20.0,
+                            spreadRadius: 2.0,
+                          ),
+                        ],
+                      ),
+                      child: Center(
+                        child: Icon(
+                          Icons.favorite,
+                          color: Color(0xFFFF243C),
+                        ),
+                      ),
+                    ),
                   ),
-                  child: ProductDetails(),
-                ),
+                ],
               ),
             ),
           ],
@@ -165,5 +197,3 @@ class DetailsScreen extends StatelessWidget {
     );
   }
 }
-
-
